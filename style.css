@@ -77,7 +77,7 @@ header {
                     color: #FAF3E0;
                     line-height: 27px;
                     font-family: "Lora", serif;
-                    font-size: 15px;
+                    font-size: 14px;
                 }
 
                 & button {
@@ -102,7 +102,7 @@ header {
 
             & .main-images {
                 & img {
-                    width: 650px;
+                    width: 550px;
                     mask-image: linear-gradient(to right, black 50%, transparent);
                 }
             }
@@ -345,7 +345,7 @@ section {
             content: '';
             position: absolute;
             background-color: #FAF3E0;
-            width: 720px;
+            width: 600px;
             height: 5px;
             transform: rotate(90deg);
 
@@ -359,9 +359,9 @@ section {
             height: 20px;
             border-radius: 100%;
             background-color: #442724;
-            box-shadow: 0 255px 0 #442724,
-                0 435px 0 #442724,
-                0 700px 0 #442724;
+            box-shadow: 0 220px 0 #442724,
+                0 380px 0 #442724,
+                0 590px 0 #442724;
         }
     }
 }
@@ -371,33 +371,32 @@ section {
 }
 
 section {
+    position: relative;
     & .container-section {
         & .title {
             color: #FAF3E0;
+            font-size: 1.5rem;
         }
 
         & .paragraf {
             color: #FAF3E0;
+            font-size: 16px;
         }
 
         & .section-form {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            background-color: #FAF3E0;
-            padding: 4rem 0;
-            margin-top: 5rem;
-            box-shadow: 0 0 45px #FAF3E0,
-                inset 0 0 45px #FAF3E0;
+            /* background-color: #FAF3E0; */
+            /* padding: 4rem 0; */
+            margin-top: 3rem;
+            /* box-shadow: 0 0 45px #FAF3E0,
+                inset 0 0 45px #FAF3E0; */
 
             & form {
-                display: grid;
-                place-items: center;
-
+               
                 & .container-form {
-
                     & .form-section-inputs {
-
                         & .form-section-last,
                         .form-section-first,
                         .form-section-email {
@@ -406,13 +405,16 @@ section {
 
                             & p {
                                 text-align: left;
+                                font-size: 14px;
+                                color: #FAF3E0;
                             }
 
                             & input {
                                 margin-top: 5px;
+                                border-radius: 5px;
                                 border: none;
                                 outline: none;
-                                padding: .5rem;
+                                padding: .5rem .3rem;
                                 width: 100%;
                                 box-shadow: 0 1px 0 #442724;
                             }
@@ -424,6 +426,7 @@ section {
 
                             & p {
                                 text-align: left;
+                                font-size: 14px;
                             }
 
                             & textarea {
@@ -441,22 +444,27 @@ section {
                             width: 200px;
                             outline: none;
                             border: none;
+                            border-radius: 5px;
                             padding: 1rem 1.5rem;
                             margin-top: 1rem;
                             font-family: "Lora", serif;
                             font-weight: 600;
-                            background-color: #442724;
-                            color: #FAF3E0;
+                            background-color: #FAF3E0;
+                            color: #442724;
                             cursor: pointer;
                         }
-
                     }
 
                 }
             }
+            & iframe{
+                width: 600px;
+                height: 400px;
+            }
         }
     }
 }
+
 footer{
     & .container-section{
         max-width: 1344px;
@@ -469,7 +477,7 @@ footer{
             justify-content: center;
             align-items: center;
             & img{
-                width: 300px;
+                width: 200px;
             }
             & .footer-items {
                 & ul{
@@ -483,6 +491,7 @@ footer{
                             color: #442724;
                             font-family: "Lora", serif;
                             font-weight: 600;
+                            font-size: 13px;
                         }
                     }
                 }
@@ -498,6 +507,7 @@ footer{
                 margin-top:10px ;
                 font-family: "Lora", serif;
                 font-weight: 600;
+                font-size: 10px;
             }
         }
     }
