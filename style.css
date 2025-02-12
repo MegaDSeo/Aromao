@@ -18,7 +18,7 @@ header {
 
         & nav {
             position: relative;
-            max-width: 1244px;
+            max-width: 1140px;
             width: 100%;
             height: auto;
             margin: auto;
@@ -58,7 +58,7 @@ header {
 
         & .main {
             position: relative;
-            max-width: 1244px;
+            max-width: 1140px;
             width: 100%;
             margin: auto;
             display: flex;
@@ -103,7 +103,7 @@ header {
             & .main-images {
                 & img {
                     width: 650px;
-                    mask-image: linear-gradient(to right, black 50%, red 50%, transparent);
+                    mask-image: linear-gradient(to right, black 50%, transparent);
                 }
             }
         }
@@ -114,14 +114,14 @@ header {
 
 section{
     & .container-section {
-        max-width: 1244px;
+        max-width: 1140px;
         width: 100%;
         margin: 0 auto 0 auto;
         padding: 4.5rem 0 4.5rem 0;
 
         & h2 {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: #442724;
         }
 
@@ -129,6 +129,7 @@ section{
             text-align: center;
             font-family: "Lora", serif;
             font-weight: 600;
+            font-size: 16px;
         }
 
         & .section-historia {
@@ -138,7 +139,9 @@ section{
             justify-content: space-evenly;
 
             & img {
-                aspect-ratio: 1/1;
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
                 background-color: #FAF3E0;
                 border-radius: 100%;
             }
@@ -147,30 +150,37 @@ section{
                 text-align: justify;
                 max-width: 500px;
                 font-size: 14px;
+                line-height: 25px;
             }
         }
     }
 }
 
 .section {
-    background-color: #442724;
-
+    background:url(./img/beneficios.png), #442724;
+       background-repeat: repeat-x;
     & .container-beneficios {
        max-width: 1300px;
        width: 100%;
        margin: auto;
        padding: 4rem;
+
         & h2,
         p {
             color: #FAF3E0;
             text-align: center;
+        }
+        & p{
+            font-family: "Lora", serif;
+            font-weight: 600;
         }
 
         & .container-cards {
             margin-top: 4rem;
             display: flex;
             justify-content: center;
-            background: linear-gradient(to left #f7b500, #FAF3E0);
+
+
             & .card1 {
                 position: relative;
                 border-radius: 8px;
@@ -192,7 +202,8 @@ section{
 
                 & .section-card1 {
                     position: relative;
-                    width: 400px;
+                    width: 300px;
+                    height: 200px;
                     background-color: #fff;
                     padding: 1rem;
                     text-align: center;
@@ -204,7 +215,7 @@ section{
                     & p {
                         text-align: justify;
                         color: #442724;
-                        font-size: 14px;
+                        font-size: 11px;
                     }
                 }
 
@@ -236,6 +247,12 @@ section{
 
 section {
     & .container-section {
+        & .opiniones{
+            font-size: 1.5rem;
+        }
+        & .lema{
+            font-size: 16px;
+        }
         & .container-timeline {
             position: relative;
             display: grid;
@@ -255,7 +272,7 @@ section {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
-                width: 500px;
+                width: 350px;
                 gap: 1rem;
 
                 & .container-face-name {
@@ -291,7 +308,7 @@ section {
                 & .container-text {
                     & p {
                         text-align: justify;
-                        font-size: 15px;
+                        font-size: 10px;
                         color: #FAF3E0;
                     }
                 }
@@ -338,8 +355,8 @@ section {
             content: '';
             position: absolute;
             top: 0;
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             border-radius: 100%;
             background-color: #442724;
             box-shadow: 0 255px 0 #442724,
