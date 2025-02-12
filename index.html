@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <header class="container">
+    <header class="container" id="inicio">
         <div class="container-header">
             <nav>
                 <img src="./img/logo.png" alt="logo de la web">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#historia">Historia</a></li>
                     <li><a href="#beneficios">Beneficios</a></li>
                     <li><a href="#opiniones">Opiniones</a></li>
@@ -32,7 +32,7 @@
                     <p>Sumérgete en un mundo de sabores únicos con nuestros chocolates artesanales, creados
                         cuidadosamente para deleitar tus sentidos. Cada bocado es una experiencia inolvidable, hecha con
                         los mejores ingredientes y una pasión inigualable por la calidad</p>
-                    <button type="button">Empezar</button>
+                    <button type="button" id="inicio">Empezar</button>
                 </div>
                 <div class="main-images">
                     <img src="./img/cover2.png" alt="">
@@ -195,29 +195,35 @@
             <h2 class="title">Contáctanos</h2>
             <p class="paragraf">Conéctate con nosotros: Siempre aquí para ayudarte</p>
             <div class="section-form">
-                <form>
+                <form id="form">
                     <div class="container-form">
                         <div class="form-section-inputs">
                             <div class="form-section-last">
                                 <p>Nombre: </p>
-                                <input type="text">
+                                <input type="text" name="name" id="name">
                             </div>
                             <div class="form-section-first">
                                 <p>Apellidos: </p>
-                                <input type="text">
+                                <input type="text" name="last" id="last">
                             </div>
                             <div class="form-section-email">
                                 <p>Email: </p>
-                                <input type="email">
+                                <input type="email" name="email" id="email">
                             </div>
                             <div class="form-section-mensaje">
                                 <p>Mensaje:</p>
-                                <textarea name="" id="" rows="7" cols="50"></textarea>
+                                <textarea name="message" id="message" rows="7" cols="50"></textarea>
                             </div>
-                            <button type="submit">Enviar</button>
+                            <input type="submit" class="btn " id="button" value="Enviar">
                         </div>
                     </div>
                 </form>
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                <script type="text/javascript">
+                    emailjs.init('IG18hXLWL830J79eH')
+                </script>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7959.849742300014!2d-79.21262749926765!3d-4.035754291856713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb3781a18539a9%3A0x42937e413fcf09eb!2sUniversidad%20Nacional%20de%20Loja!5e0!3m2!1ses!2sec!4v1739327435794!5m2!1ses!2sec"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -231,7 +237,7 @@
                 <img src="./img/logo.png" alt="">
                 <div class="footer-items">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#historia">Historia</a></li>
                         <li><a href="#beneficios">Beneficios</a></li>
                         <li><a href="#opiniones">Opiniones</a></li>
@@ -244,6 +250,9 @@
 
         </div>
     </footer>
+
+
+    <script src="./index.js"></script>
 </body>
 
 </html>

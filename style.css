@@ -11,38 +11,33 @@ body {
     height: 100vh;
     font-family: "Rye", serif;
 }
-
+/* ESTILOS DEL NAV Y MAIN DE INCIO */
 header {
     & .container-header {
         background-color: #FAF3E0;
-
         & nav {
             position: relative;
             max-width: 1140px;
             width: 100%;
-            height: auto;
             margin: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 15vh;
-
             & img {
                 width: 200px;
             }
-
             & ul {
                 display: flex;
                 gap: 2rem;
-
                 & li {
                     list-style: none;
-
                     & a {
                         text-decoration: none;
                         color: #442724;
                         font-family: "Lora", serif;
                         font-weight: 600;
+                        font-size: 14px;
                     }
                 }
             }
@@ -55,20 +50,17 @@ header {
         background-blend-mode: overlay;
         background-size: cover;
         height: calc(100vh - 15vh);
-
         & .main {
-            position: relative;
             max-width: 1140px;
             width: 100%;
             margin: auto;
             display: flex;
+            align-items: center;
             & .main-titles {
                 max-width: 600px;
-                margin-top: 7rem;
-
                 & h1 {
                     color: #FAF3E0;
-                    font-size: 2.5rem;
+                    font-size: 2.1rem;
                     text-transform: uppercase;
                 }
 
@@ -91,8 +83,7 @@ header {
                     cursor: pointer;
                     font-family: "Lora", serif;
                     font-size: 16px;
-                    transition: background 0.2s, color 0.2s;
-
+                    transition: background 0.2s ease, color 0.2s ease;
                     &:hover {
                         background: #FAF3E0;
                         color: #442724;
@@ -102,7 +93,8 @@ header {
 
             & .main-images {
                 & img {
-                    width: 550px;
+                    width: 490px;
+                    height: 490px;
                     mask-image: linear-gradient(to right, black 50%, transparent);
                 }
             }
@@ -118,26 +110,22 @@ section{
         width: 100%;
         margin: 0 auto 0 auto;
         padding: 4.5rem 0 4.5rem 0;
-
         & h2 {
             text-align: center;
             font-size: 1.5rem;
             color: #442724;
         }
-
         & p {
             text-align: center;
             font-family: "Lora", serif;
             font-weight: 600;
             font-size: 16px;
         }
-
         & .section-historia {
             margin-top: 2rem;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-
             & img {
                 width: 400px;
                 height: 400px;
@@ -145,7 +133,6 @@ section{
                 background-color: #FAF3E0;
                 border-radius: 100%;
             }
-
             & p {
                 text-align: justify;
                 max-width: 500px;
@@ -164,7 +151,6 @@ section{
        width: 100%;
        margin: auto;
        padding: 4rem;
-
         & h2,
         p {
             color: #FAF3E0;
@@ -174,13 +160,10 @@ section{
             font-family: "Lora", serif;
             font-weight: 600;
         }
-
         & .container-cards {
             margin-top: 4rem;
             display: flex;
             justify-content: center;
-
-
             & .card1 {
                 position: relative;
                 border-radius: 8px;
@@ -190,7 +173,6 @@ section{
                 place-items: center;
                 clip-path: circle(70% at 50% 50%);
                 transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-
                 & img {
                     position: absolute;
                     width: 250px;
@@ -199,7 +181,6 @@ section{
                     filter: drop-shadow(0 0 10px #fff);
                     transition: transform 300ms ease;
                 }
-
                 & .section-card1 {
                     position: relative;
                     width: 300px;
@@ -220,27 +201,20 @@ section{
                 }
 
             }
-
             & .card3 img {
                 width: 175px;
             }
-
             & .card1:hover {
                 background-color: #fff;
                 clip-path: circle(100% at 50% 50%);
                 border-radius: 0;
-
                 img {
-                    /* transform: translateY(-110px); */
                     transform: scale(1);
                 }
-
                 .section-card1 {
                     background: linear-gradient(to top, #ffffff, #ffffff99);
-
                 }
             }
-
         }
     }
 }
@@ -279,15 +253,12 @@ section {
                     display: flex;
                     gap: 1rem;
                     width: 400px;
-
-                    /* background-color: red; */
                     & img {
                         width: 50px;
                         height: 50px;
                         border-radius: 50%;
                         object-fit: cover;
                     }
-
                     & .name-face {
                         & p {
                             text-align: left;
@@ -295,7 +266,6 @@ section {
                             font-weight: 800;
                             color: #FAF3E0;
                         }
-
                         & span {
                             font-size: 13px;
                             font-family: "Lora", serif;
@@ -304,7 +274,6 @@ section {
                         }
                     }
                 }
-
                 & .container-text {
                     & p {
                         text-align: justify;
@@ -313,7 +282,6 @@ section {
                     }
                 }
             }
-
             & .opinion--one,
             .opinion--two,
             .opinion--three,
@@ -322,23 +290,18 @@ section {
                 padding: 1.2rem;
                 border-radius: 8px;
             }
-
             & .opinion--one {
                 grid-area: opinion1;
             }
-
             & .opinion--two {
                 grid-area: opinion2;
             }
-
             & .opinion--three {
                 grid-area: opinion3;
             }
-
             & .opinion--four {
                 grid-area: opinion4;
             }
-
         }
 
         & .container-timeline:before {
@@ -350,7 +313,6 @@ section {
             transform: rotate(90deg);
 
         }
-
         & .container-timeline:after {
             content: '';
             position: absolute;
@@ -365,7 +327,6 @@ section {
         }
     }
 }
-
 #contacto {
     background-color: #442724;
 }
@@ -387,14 +348,8 @@ section {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            /* background-color: #FAF3E0; */
-            /* padding: 4rem 0; */
             margin-top: 3rem;
-            /* box-shadow: 0 0 45px #FAF3E0,
-                inset 0 0 45px #FAF3E0; */
-
             & form {
-               
                 & .container-form {
                     & .form-section-inputs {
                         & .form-section-last,
@@ -402,13 +357,11 @@ section {
                         .form-section-email {
                             margin-top: 15px;
                             position: relative;
-
                             & p {
                                 text-align: left;
                                 font-size: 14px;
                                 color: #FAF3E0;
                             }
-
                             & input {
                                 margin-top: 5px;
                                 border-radius: 5px;
@@ -417,18 +370,15 @@ section {
                                 padding: .5rem .3rem;
                                 width: 100%;
                                 box-shadow: 0 1px 0 #442724;
+                                background-color: #fff;
                             }
-
                         }
-
                         & .form-section-mensaje {
                             margin-top: 15px;
-
                             & p {
                                 text-align: left;
                                 font-size: 14px;
                             }
-
                             & textarea {
                                 border-radius: 5px;
                                 outline: none;
@@ -439,8 +389,7 @@ section {
                                 background-color: #fff;
                             }
                         }
-
-                        & button {
+                        & input {
                             width: 200px;
                             outline: none;
                             border: none;
