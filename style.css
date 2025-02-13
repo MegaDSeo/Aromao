@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rye&display=swap');
 
-* {
+* , html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -12,8 +13,10 @@ body {
     font-family: "Rye", serif;
 }
 /* ESTILOS DEL NAV Y MAIN DE INCIO */
+
 header {
     & .container-header {
+        width: auto;
         background-color: #FAF3E0;
         & nav {
             position: relative;
@@ -41,6 +44,9 @@ header {
                     }
                 }
             }
+            & i{
+                display: none;
+            }
         }
 
     }
@@ -55,12 +61,14 @@ header {
             width: 100%;
             margin: auto;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            justify-content: space-between;
             & .main-titles {
-                max-width: 600px;
+                max-width: 500px;
                 & h1 {
                     color: #FAF3E0;
-                    font-size: 2.1rem;
+                    font-size: 2rem;
                     text-transform: uppercase;
                 }
 
@@ -69,12 +77,12 @@ header {
                     color: #FAF3E0;
                     line-height: 27px;
                     font-family: "Lora", serif;
-                    font-size: 14px;
+                    font-size: 13px;
                 }
 
                 & button {
-                    width: 200px;
-                    padding: 1rem;
+                    width: 150px;
+                    padding: .7rem;
                     margin-top: 2rem;
                     background-color: #442724;
                     color: #FAF3E0;
@@ -124,6 +132,7 @@ section{
         & .section-historia {
             margin-top: 2rem;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-evenly;
             & img {
@@ -138,6 +147,7 @@ section{
                 max-width: 500px;
                 font-size: 14px;
                 line-height: 25px;
+                padding: 1rem
             }
         }
     }
@@ -162,8 +172,8 @@ section{
         }
         & .container-cards {
             margin-top: 4rem;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             & .card1 {
                 position: relative;
                 border-radius: 8px;
@@ -172,6 +182,7 @@ section{
                 justify-content: center;
                 place-items: center;
                 clip-path: circle(70% at 50% 50%);
+                overflow-y: hidden;
                 transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
                 & img {
                     position: absolute;
@@ -183,8 +194,8 @@ section{
                 }
                 & .section-card1 {
                     position: relative;
-                    width: 300px;
-                    height: 200px;
+                    width: 325px;
+                    height: 250px;
                     background-color: #fff;
                     padding: 1rem;
                     text-align: center;
@@ -230,14 +241,15 @@ section {
         & .container-timeline {
             position: relative;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 450px);
+            grid-template-rows: repeat(4, 150px);
             grid-template-areas: "opinion1 ."
                 ". opinion2"
                 "opinion3 ."
                 ". opinion4";
-            margin-top: 3rem;
+            margin-top: 5rem;
             place-items: center;
+            place-content: center;
 
             & .opinion--one,
             .opinion--two,
@@ -246,7 +258,7 @@ section {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
-                width: 350px;
+                width: 300px;
                 gap: 1rem;
 
                 & .container-face-name {
@@ -277,7 +289,7 @@ section {
                 & .container-text {
                     & p {
                         text-align: justify;
-                        font-size: 10px;
+                        font-size: 8px;
                         color: #FAF3E0;
                     }
                 }
@@ -308,8 +320,9 @@ section {
             content: '';
             position: absolute;
             background-color: #FAF3E0;
-            width: 600px;
+            width: 560px;
             height: 5px;
+            top: 300px;
             transform: rotate(90deg);
 
         }
@@ -321,9 +334,9 @@ section {
             height: 20px;
             border-radius: 100%;
             background-color: #442724;
-            box-shadow: 0 220px 0 #442724,
-                0 380px 0 #442724,
-                0 590px 0 #442724;
+            box-shadow: 0 210px 0 #442724,
+                0 360px 0 #442724,
+                0 560px 0 #442724;
         }
     }
 }
@@ -346,8 +359,9 @@ section {
 
         & .section-form {
             display: flex;
-            align-items: center;
             justify-content: space-evenly;
+            gap: 2rem;
+            flex-wrap: wrap;
             margin-top: 3rem;
             & form {
                 & .container-form {
@@ -457,6 +471,107 @@ footer{
                 font-family: "Lora", serif;
                 font-weight: 600;
                 font-size: 10px;
+            }
+        }
+    }
+}
+
+
+/* BREAKPOINTS PARA DISPODITIVOS DE - 990PX */
+@media screen and (max-width: 1025px) {
+    header{
+        & .container-header{
+            & nav{
+                max-width: 850px;
+            }
+        }
+        & .container-main{
+            display: grid;
+            & .main{
+                justify-content: center;
+                align-items: center;
+                & .main-titles{
+                    max-width: 700px;
+                    & h1{
+                        text-align: center;
+                    }
+                    & p{
+                        text-align: center;
+                    }
+                    & button{
+                        display: block;
+                        margin: 1rem auto;
+                    }
+                }
+                & .main-images{
+                    & img{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    header{
+        & .container-header{
+            & nav{
+                & ul{
+                    display: grid;
+                    place-items: center;
+                    position: fixed;
+                    width: 300px;
+                    height: 85vh;
+                    right: -300px;
+                    top: 15vh;
+                    background: #FAF3E0;
+                    transition: right 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+                & .menu-open{
+                    right: 0;
+                }
+                
+                & i{
+                    display: block;
+                    & img{
+                        width: 30px;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+    #opiniones{
+        & .container-section{
+            & .container-timeline{
+                grid-template-columns: repeat(1, 400px);
+                grid-template-rows: repeat(4, 150px);
+                grid-template-areas: "opinion1"
+                                     "opinion2"
+                                     "opinion3"
+                                     "opinion4";
+                gap: 1rem;
+                margin-top: 3rem;
+            }
+            & .container-timeline:after, .container-timeline::before{
+                content: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:481px) {
+    footer{
+        & .container-section{
+            & .footer-information{
+                & .footer-items{
+                    & ul{
+                        display: grid;
+                        place-items: center;
+                    }
+                }
             }
         }
     }

@@ -1,5 +1,7 @@
 const btn = document.getElementById('button');
 const form = document.getElementById('form');
+const icon = document.getElementById("bar")
+const menu = document.getElementById("ul");
 
 document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -19,3 +21,8 @@ document.getElementById('form').addEventListener('submit', function (event) {
             alert(JSON.stringify(err));
         });
 });
+
+icon.addEventListener('click', () => {
+    menu.classList.toggle("menu-open");
+});
+
