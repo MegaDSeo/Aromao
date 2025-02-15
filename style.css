@@ -25,6 +25,7 @@ header {
             align-items: center;
             justify-content: space-between;
             height: 15vh;
+            overflow: hidden;
             & img {
                 width: 200px;
             }
@@ -574,6 +575,14 @@ footer{
                     height: 85vh;
                     right: -100vw;
                     top: 15vh;
+                }
+            }
+        }
+        & .container-main{
+            height: 100vh;
+            & .main{
+                & .main-titles{
+                    margin-top: 6rem;
                 }
             }
         }
