@@ -13,7 +13,7 @@
 <body>
     <header class="container" id="inicio">
         <div class="container-header">
-            <nav >
+            <nav id="menu">
                 <img src="./img/logo.png" alt="logo de la web">
                 <ul id="ul">
                     <li><a href="#inicio">Inicio</a></li>
@@ -219,10 +219,10 @@
                         </div>
                     </div>
                 </form>
-                <script type="text/javascript"
-                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+                    defer></script>
 
-                <script type="text/javascript">
+                <script type="text/javascript" defer>
                     emailjs.init('IG18hXLWL830J79eH')
                 </script>
                 <iframe
@@ -252,7 +252,26 @@
         </div>
     </footer>
 
+    <script defer>
+        document.getElementById('form').addEventListener('submit', function (event) {
+            event.preventDefault();
 
+            btn.value = 'Enviando...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_ejsm0hu';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Enviar';
+                    alert('Mensaje enviado!');
+                    form.reset(); 
+                }, (err) => {
+                    btn.value = 'Enviar';
+                    alert(JSON.stringify(err));
+                });
+        });
+    </script>
     <script src="./index.js"></script>
 </body>
 

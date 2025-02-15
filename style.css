@@ -12,8 +12,6 @@ body {
     height: 100vh;
     font-family: "Rye", serif;
 }
-/* ESTILOS DEL NAV Y MAIN DE INCIO */
-
 header {
     & .container-header {
         width: auto;
@@ -562,6 +560,24 @@ footer{
 }
 
 @media screen and (max-width:481px) {
+    header{
+        & .container-header{
+            position: fixed;
+            right: 0;
+            width: 100vw;
+            z-index: 9999;
+            & nav{
+                & ul{
+                    
+                    width: 100vw;
+                    height: 85vh;
+                    right: -100vw;
+                    top: 15vh;
+                }
+            }
+        }
+    }
+
     #historia{
         & .container-section{
             & .section-historia{
